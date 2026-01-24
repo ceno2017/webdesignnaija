@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 
-//import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 
@@ -115,6 +114,10 @@ export default function WebDesignLandingPage() {
               {
                 name: "SEO enhancements for existing sites in PH",
                 desc: "For pre-existing websites we can help improve search engine rankings for your business by doing some work on your site.",
+              },
+              {
+                name: "React/Next.js Apps",
+                desc: "We specialize in React and Next.js apps, Supabase for database, Auth.js for authentication and authorization and payments with stripe.",
               },
             ].map((service) => (
               <Card key={service.name} className="rounded-2xl shadow-md">

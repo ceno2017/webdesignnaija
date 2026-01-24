@@ -1,7 +1,7 @@
 import Head from "next/head";
-import { Button } from "@/components/ui/button";
+
 import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "lucide-react";
+import Link from "next/link";
 
 export default function WebDesignLandingPage() {
   return (

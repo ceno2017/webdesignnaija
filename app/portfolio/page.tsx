@@ -49,7 +49,7 @@ export default async function WebDesignLandingPage() {
                 variant="secondary"
                 className="rounded-2xl px-8 py-6 text-lg"
               >
-                View Portfolio
+                See Portfolio below
               </Button>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default async function WebDesignLandingPage() {
               },
               {
                 name: "Citadel Mud School",
-                desc: "We built this site for Citadel Mud School, and enabled students to sign in, sign out, fill out enrolment forms, and make payments for courses",
+                desc: "We built this site for Citadel Mud School, and enabled students to sign in, sign out, fill out enrolment forms, and make payments for courses.",
                 link: "https://citadelmudschool.com",
               },
               {
@@ -106,15 +106,13 @@ export default async function WebDesignLandingPage() {
                   <p className="text-slate-600">
                     {service.desc}
                     <br />
-                    Visit here{" "}
+
                     <Link
                       href={service.link}
+                      className="flex items-center justify-center rounded-md bg-slate-800 px-4 py-2 text-sm font-medium text-white shadow-md transition hover:bg-slate-700 hover:shadow-lg"
                       target="_blank"
-                      className="inline-flex rounded-full px-3 py-1.5 border-doubletext-slate-500 hover:text-indigo-500"
                     >
-                      <button className="bg-[#072684]  rounded-xl text-[#F1EDEA] dark:text-sky-400 text-sm md:text-base ">
-                        {service.name}
-                      </button>
+                      {service.name}
                     </Link>
                   </p>
                 </CardContent>
