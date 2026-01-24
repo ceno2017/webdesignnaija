@@ -133,15 +133,13 @@ export default async function WebDesignLandingPage() {
           Let’s build a website that works for your business.
         </p>
         <div className="mt-8">
-          <a
+          <Link
             href="https://wa.me/2347012585759?text=Hello%20Charles,%20I%20would%20like%20to%20hire%20you%20for%20a%20web%20design%20project."
             target="_blank"
-            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md bg-[#072684] px-4 py-2 text-sm font-medium text-white shadow-md transition hover:bg-slate-700 hover:shadow-lg"
           >
-            <Button className="rounded-2xl px-10 py-6 text-lg">
-              Chat on WhatsApp
-            </Button>
-          </a>
+            Hire us by reaching us on WhatsApp
+          </Link>
         </div>
       </section>
 
