@@ -1,17 +1,22 @@
 import Head from "next/head";
-import Link from "next/link";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
+import Link from "next/link";
+import { auth } from "../_lib/auth";
 
-export default function WebDesignLandingPage() {
+export const metadata = {
+  title: "Our Portfolio",
+};
+
+export default async function WebDesignLandingPage() {
+  const session = await auth();
+  const firstName = session?.user?.name?.split(" ").at(0);
+
   return (
     <>
       <Head>
-        <title>
-          Professional Web Designer for Hire | Modern SEO‑Optimized Websites
-        </title>
+        <title>Professional Web Designer for Hire | Our Portfolio</title>
         <meta
           name="description"
           content="Hire a professional web designer for modern, fast, SEO‑optimized websites. I design business websites, landing pages, and web apps that convert visitors into clients."
@@ -21,7 +26,7 @@ export default function WebDesignLandingPage() {
           content="web designer for hire, web design services in Nigeria, SEO web design, Next.js developer"
         />
         <meta name="author" content="Charles Eno" />
-        <link rel="canonical" href="https://webdesignnaija.com" />
+        <link rel="canonical" href="https://yourdomain.com" />
       </Head>
 
       {/* Hero Section */}
@@ -29,8 +34,9 @@ export default function WebDesignLandingPage() {
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-              We Build <span className="text-emerald-400">High‑Converting</span>{" "}
-              Websites That Get Clients
+              Welcome <br />
+              <span className="text-emerald-400">{firstName}...</span> What can
+              we do for you?
             </h1>
             <p className="mt-6 text-lg text-slate-300">
               We help startups, businesses, and entrepreneurs stand out online
@@ -38,20 +44,13 @@ export default function WebDesignLandingPage() {
               modern technologies like <strong>Next.js</strong>.
             </p>
             <div className="mt-8 flex gap-4">
-              <Link
-                href="https://wa.me/2347012585759?text=Hello%20Charles,%20I%20would%20like%20to%20hire%20you%20for%20a%20web%20design%20project."
-                target="_blank"
-                className="inline-flex items-center justify-center rounded-md bg-[#072684] px-4 py-2 text-sm font-medium text-white shadow-md transition hover:bg-slate-700 hover:shadow-lg"
-              >
-                Hire us by reaching us on WhatsApp
-              </Link>
-
-              <Link
-                href="/portfolio"
-                className="inline-flex items-center justify-center rounded-md bg-slate-800 px-4 py-2 text-sm font-medium text-white shadow-md transition hover:bg-slate-700 hover:shadow-lg"
+              <Button className="rounded-2xl px-8 py-6 text-lg">Hire Me</Button>
+              <Button
+                variant="secondary"
+                className="rounded-2xl px-8 py-6 text-lg"
               >
                 View Portfolio
-              </Link>
+              </Button>
             </div>
           </div>
 
@@ -78,9 +77,7 @@ export default function WebDesignLandingPage() {
       {/* Services Section */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center">
-            Web Design Services
-          </h2>
+          <h2 className="text-3xl font-bold text-center">Some of our jobs</h2>
           <p className="text-center text-slate-600 mt-4 max-w-2xl mx-auto">
             Everything you need to turn visitors into paying clients.
           </p>
@@ -88,59 +85,41 @@ export default function WebDesignLandingPage() {
           <div className="grid md:grid-cols-3 gap-8 mt-16">
             {[
               {
-                name: "Landing Pages",
+                name: "Jeftech Ltd",
                 desc: "Get landing pages that with strong messaging, and SEO best practices to help you businesses over the line.",
+                link: "https://jeftechltd.com",
               },
               {
-                name: "Business Websites",
-                desc: "Clean design, strong messaging, and SEO best practices to help you rank and convert.",
+                name: "Citadel Mud School",
+                desc: "We built this site for Citadel Mud School, and enabled students to sign in, sign out, fill out enrolment forms, and make payments for courses",
+                link: "https://citadelmudschool.com",
               },
               {
-                name: "Web Apps & Dashboards",
-                desc: "School management systems complete with result management, fee management with payment portal.",
-              },
-              {
-                name: "Enterprise Applications for companies",
-                desc: "We listen to your company's needs and then build enterprise applications for your company's internal workings that enhances efficiency",
-              },
-              {
-                name: "SEO enhancements for existing sites",
-                desc: "For pre-existing websites we can help improve search engine rankings for your business by doing some work on your site.",
-              },
-              {
-                name: "React/Next.js Apps",
-                desc: "We specialize in React and Next.js apps, Supabase for database, Auth.js for authentication and authorization and payments with stripe.",
+                name: "DAS Logistics",
+                desc: "DAS Logistics is a premier provider of Integrated Logistics and supply chain solutions.",
+                link: "https://daslogisticschain.com/",
               },
             ].map((service) => (
               <Card key={service.name} className="rounded-2xl shadow-md">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
-                  <p className="text-slate-600">{service.desc}</p>
+                  <p className="text-slate-600">
+                    {service.desc}
+                    <br />
+                    Visit here{" "}
+                    <Link
+                      href={service.link}
+                      target="_blank"
+                      className="inline-flex rounded-full px-3 py-1.5 border-doubletext-slate-500 hover:text-indigo-500"
+                    >
+                      <button className="bg-[#072684]  rounded-xl text-[#F1EDEA] dark:text-sky-400 text-sm md:text-base ">
+                        {service.name}
+                      </button>
+                    </Link>
+                  </p>
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Me */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-3xl font-bold">Why Hire Us?</h2>
-            <ul className="mt-6 space-y-4 text-slate-700">
-              <li>✔ SEO‑first approach for Google ranking</li>
-              <li>✔ Modern stack: Next.js, React, Tailwind</li>
-              <li>✔ Clear communication & fast delivery</li>
-              <li>✔ Conversion‑focused design</li>
-            </ul>
-          </div>
-          <div className="bg-slate-100 rounded-2xl p-8">
-            <p className="text-lg text-slate-700">
-              We delivered a fast, beautiful website that started bringing leads
-              within weeks. Highly recommended!
-            </p>
-            <p className="mt-4 font-semibold">— Happy Client</p>
           </div>
         </div>
       </section>

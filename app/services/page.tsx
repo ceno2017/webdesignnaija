@@ -1,9 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle } from "lucide-react";
 
 export default function WebDesignLandingPage() {
   return (
@@ -21,59 +18,8 @@ export default function WebDesignLandingPage() {
           content="web designer for hire, web design services in Nigeria, SEO web design, Next.js developer"
         />
         <meta name="author" content="Charles Eno" />
-        <link rel="canonical" href="https://webdesignnaija.com" />
+        <link rel="canonical" href="https://yourdomain.com" />
       </Head>
-
-      {/* Hero Section */}
-      <section className="min-h-screen bg-linear-to-br from-sky-600 to-blue-500 text-white flex items-center">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-              We Build <span className="text-emerald-400">High‑Converting</span>{" "}
-              Websites That Get Clients
-            </h1>
-            <p className="mt-6 text-lg text-slate-300">
-              We help startups, businesses, and entrepreneurs stand out online
-              with fast, mobile‑friendly, SEO‑optimized websites built using
-              modern technologies like <strong>Next.js</strong>.
-            </p>
-            <div className="mt-8 flex gap-4">
-              <Link
-                href="https://wa.me/2347012585759?text=Hello%20Charles,%20I%20would%20like%20to%20hire%20you%20for%20a%20web%20design%20project."
-                target="_blank"
-                className="inline-flex items-center justify-center rounded-md bg-[#072684] px-4 py-2 text-sm font-medium text-white shadow-md transition hover:bg-slate-700 hover:shadow-lg"
-              >
-                Hire us by reaching us on WhatsApp
-              </Link>
-
-              <Link
-                href="/portfolio"
-                className="inline-flex items-center justify-center rounded-md bg-slate-800 px-4 py-2 text-sm font-medium text-white shadow-md transition hover:bg-slate-700 hover:shadow-lg"
-              >
-                View Portfolio
-              </Link>
-            </div>
-          </div>
-
-          <div>
-            <Card className="rounded-2xl bg-white/5 border-white/10">
-              <CardContent className="p-8 space-y-4">
-                {[
-                  "SEO‑friendly structure",
-                  "Fast loading & Core Web Vitals",
-                  "Mobile‑first design",
-                  "Clear call‑to‑action",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <CheckCircle className="text-emerald-400" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Services Section */}
       <section className="py-24 bg-slate-50">
@@ -123,34 +69,12 @@ export default function WebDesignLandingPage() {
         </div>
       </section>
 
-      {/* Why Choose Me */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-3xl font-bold">Why Hire Us?</h2>
-            <ul className="mt-6 space-y-4 text-slate-700">
-              <li>✔ SEO‑first approach for Google ranking</li>
-              <li>✔ Modern stack: Next.js, React, Tailwind</li>
-              <li>✔ Clear communication & fast delivery</li>
-              <li>✔ Conversion‑focused design</li>
-            </ul>
-          </div>
-          <div className="bg-slate-100 rounded-2xl p-8">
-            <p className="text-lg text-slate-700">
-              We delivered a fast, beautiful website that started bringing leads
-              within weeks. Highly recommended!
-            </p>
-            <p className="mt-4 font-semibold">— Happy Client</p>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="py-24 bg-[#24D29B] text-white text-center">
+      <section className="py-24 bg-[#4750DD] text-white text-center">
         <h2 className="text-3xl md:text-4xl font-bold">
           Ready to Get More Clients?
         </h2>
-        <p className="mt-4 text-[#094542]">
+        <p className="mt-4 text-slate-300">
           Let’s build a website that works for your business.
         </p>
         <div className="mt-8">
@@ -167,7 +91,7 @@ export default function WebDesignLandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 text-center text-[#E6E6E6] bg-[#041C4D]">
+      <footer className="py-8 text-center text-slate-500 bg-black">
         © {new Date().getFullYear()} Webplan Software Development Ltd — Web
         Designer, Hospital and School Management Systems & Next.js Developer
       </footer>
