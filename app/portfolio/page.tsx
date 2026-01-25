@@ -109,7 +109,7 @@ export default async function WebDesignLandingPage() {
 
                     <Link
                       href={service.link}
-                      className="flex items-center justify-center rounded-md bg-slate-800 px-4 py-2 text-sm font-medium text-white shadow-md transition hover:bg-slate-700 hover:shadow-lg"
+                      className="flex items-center justify-center rounded-md bg-[#2D11E9] px-4 py-2 text-sm font-medium text-white shadow-md transition hover:bg-slate-700 hover:shadow-lg"
                       target="_blank"
                     >
                       {service.name}
