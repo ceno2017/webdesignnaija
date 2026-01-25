@@ -38,7 +38,7 @@ export default async function WebDesignLandingPage() {
               <span className="text-emerald-400">{firstName}...</span> What can
               we do for you?
             </h1>
-            <p className="mt-6 text-lg text-slate-300">
+            <p className="mt-6 text-lg text-[#0C287B]">
               We help startups, businesses, and entrepreneurs stand out online
               with fast, mobile‑friendly, SEO‑optimized websites built using
               modern technologies like <strong>Next.js</strong>.
@@ -86,17 +86,17 @@ export default async function WebDesignLandingPage() {
             {[
               {
                 name: "Jeftech Ltd",
-                desc: "Get landing pages that with strong messaging, and SEO best practices to help you businesses over the line.",
+                desc: "JEFTECH LTD has a razor-like focus on goals & sustainability: Ensuring every team member understands their contribution to organizational growth while leveraging technology and responsible practices for sustainable operations.",
                 link: "https://jeftechltd.com",
               },
               {
                 name: "Citadel Mud School",
-                desc: "We built this site for Citadel Mud School, and enabled students to sign in, sign out, fill out enrolment forms, and make payments for courses.",
+                desc: "We built this site for Citadel Mud School, and enabled students to sign in, sign out, fill out enrolment forms, and make payments for courses.Citadel provides ilfield Training Services, Leadership and Management Development Academy, Mud Engineering Technical Consulting,",
                 link: "https://citadelmudschool.com",
               },
               {
                 name: "DAS Logistics",
-                desc: "DAS Logistics is a premier provider of Integrated Logistics and supply chain solutions.",
+                desc: "DAS Logistics is a premier provider of Integrated Logistics and supply chain solutions.DAS provides Proven expertise in Logistics and Supply Chain management, Our robust transportation solution especially in the marine sector ensure",
                 link: "https://daslogisticschain.com/",
               },
             ].map((service) => (
