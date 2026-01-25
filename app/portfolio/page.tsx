@@ -91,7 +91,7 @@ export default async function WebDesignLandingPage() {
               },
               {
                 name: "Citadel Mud School",
-                desc: "We built this site for Citadel Mud School, and enabled students to sign in, sign out, fill out enrolment forms, and make payments for courses.Citadel provides ilfield Training Services, Leadership and Management Development Academy, Mud Engineering Technical Consulting,",
+                desc: "We built this site for Citadel Mud School, and enabled students to sign in, sign out, fill out enrolment forms, and make payments for courses.Citadel provides ilfield Training Services, Leadership and Management Development Academy, etc..",
                 link: "https://citadelmudschool.com",
               },
               {
