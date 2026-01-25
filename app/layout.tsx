@@ -19,6 +19,9 @@ export const metadata = {
     "We focus on our client's satisd=faction as rfegards web design and web app development in Port Harcourt",
   keywords:
     "website design Port Harcourt,web design company Port Harcourt,website developers in Port Harcourt,affordable web design Port Harcourt,ecommerce website design Port Harcourt,responsive web design Port Harcourt,professional website design Port Harcourt,best web design agency Port Harcourt,business website design Port Harcourt",
+  verification: {
+    google: "google21ac721eed3738b3",
+  },
 };
 
 export default function RootLayout({
