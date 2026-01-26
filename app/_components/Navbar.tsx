@@ -14,7 +14,7 @@ export default function Navbar() {
         <nav className="hidden md:flex gap-6">
           <Link href="/">Home</Link>
           <Link href="/services">Services</Link>
-          <Link href="/portharcourt">Web Dev in PH</Link>
+          <Link href="/locationBased">Our Locations</Link>
           <Link
             href="https://wa.me/2347012585759?text=Hello%20Charles,%20I%20would%20like%20to%20hire%20you%20for%20a%20web%20design%20project."
             target="_blank"
