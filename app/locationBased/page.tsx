@@ -10,9 +10,6 @@ export const metadata = {
 };
 
 export default async function WebDesignLandingPage() {
-  const session = await auth();
-  const firstName = session?.user?.name?.split(" ").at(0);
-
   return (
     <>
       <Head>
@@ -34,9 +31,9 @@ export default async function WebDesignLandingPage() {
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-              Welcome <br />
-              <span className="text-emerald-400">{firstName}...</span> What can
-              we do for you?
+              Our Areas <br />
+              <span className="text-emerald-400">of focus.</span> What can we do
+              for you?
             </h1>
             <p className="mt-6 text-lg text-[#0C287B]">
               We help startups, businesses, and entrepreneurs stand out online
@@ -108,7 +105,7 @@ export default async function WebDesignLandingPage() {
               },
               {
                 name: "Abuja",
-                desc: "We have a presence in Abuja, and can provide any of our web development services in Abuja including data analysis..",
+                desc: "We have a presence in Abuja, and can provide any of our web development services in Abuja including data analysis.",
                 link: "/abuja",
               },
               {
