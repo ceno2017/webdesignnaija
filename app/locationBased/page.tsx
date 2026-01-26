@@ -86,7 +86,7 @@ export default async function WebDesignLandingPage() {
               {
                 name: "Port Harcourt",
                 desc: "We have a presence in P.H, and can provide any of our web development services in Port Harcourt including data analysis.",
-                link: "/portHarcourt",
+                link: "/portharcourt",
               },
               {
                 name: "Warri",
