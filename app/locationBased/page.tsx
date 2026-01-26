@@ -4,7 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { auth } from "../_lib/auth";
-import { color } from "motion";
 
 export const metadata = {
   title: "Our Portfolio",
