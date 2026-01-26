@@ -113,7 +113,7 @@ export default async function WebDesignLandingPage() {
               },
               {
                 name: "Ibadan",
-                desc: "We have a presence in Ibadan, and can provide any of our web development services in Ibadan including data analysis.",
+                desc: "We have a presence in Ibadan, and can provide any of our web development services in Ibadan & data analysis.",
                 link: "/ibadan",
               },
             ].map((service) => (
